@@ -1,6 +1,10 @@
 version: '3.1'
 
 services:
+  my-mongo-app:
+    image: 065642457853.dkr.ecr.ap-south-1.amazonaws.com/my-mongo-app:1.0
+    ports:
+      - 3000:3000
   mongo:
     image: mongo
     restart: always
@@ -18,4 +22,3 @@ services:
       ME_CONFIG_MONGODB_SERVER : mongo
     ports:
       - 8081:8081
-
